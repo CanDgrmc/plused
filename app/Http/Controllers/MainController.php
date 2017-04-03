@@ -181,7 +181,18 @@ class MainController extends Controller
       return view('orneksinavlar')->with('title',$title);
     }
 
-
+    public function educitykayit(Request $req){
+      $data=array(
+        "ogrenci_ad_soyad" => $req->ogrenci_ad_soyad;
+        "ogrenci_no" => $req->ogrenci_no;
+        "ogrenci_mail" => $req->ogrenci_mail;
+        "veli_ad_soyad" => $req->veli_ad_soyad;
+        "veli_mail" => $req->veli_mail;
+        "tel" => $req->tel;
+        "okul" => $req->okul;
+        "sehir" => $req->sehir;
+        );
+    }
     public function lrn(){
       $title="LRN GLOBAL";
       return view('lrntestcenter')->with('title',$title);

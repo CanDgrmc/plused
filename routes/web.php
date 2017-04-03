@@ -49,6 +49,7 @@ Route::group(['middleware' => 'filterssl'], function () {
     Route::get('/educity-online', function(){
         return view('/educity-online')->with('title','Educity Online');
     });
+    Route::post('/educity-kayit','MainController@educitykayit');
 
 
     Route::get('awschool','MainController@awschool');    
